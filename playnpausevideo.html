@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>WordPress &#8250; ReadMe</title>
+
+</head>
+<body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="http://a.vimeocdn.com/js/froogaloop2.min.js"></script>
+
+
+<!-- Vimeo Video iframe -->
+<iframe src="https://player.vimeo.com/video/80312270?api=1" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen id="video"></iframe>
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+//change video from live id
+var iframe = document.getElementById('video');
+
+// $f == Froogaloop
+var player = $f(iframe);
+
+//Active
+window.addEventListener('focus', startv);
+
+ // Inactive
+window.addEventListener('blur', stopv);
+
+ // Start timer
+ function startv() {
+ 	player.api("play");
+ }
+
+ // Stop timer
+ function stopv() {
+ 	player.api("pause");
+ }
+</script>
+
+</body>
+</html>
